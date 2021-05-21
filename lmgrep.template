@@ -1,0 +1,21 @@
+class Lmgrep < Formula
+
+  desc "Grep-like utility based on Lucene Monitor"
+  homepage "https://github.com/dainiusjocas/lucene-grep"
+  version "${VERSION}"
+
+  if OS.linux?
+    url "https://github.com/dainiusjocas/lucene-grep/releases/download/v${VERSION}/lmgrep-v${VERSION}-linux-amd64.zip"
+    sha256 "${LINUX_SHA}"
+  else
+    url "https://github.com/dainiusjocas/lucene-grep/releases/download/v${VERSION}/lmgrep-v${VERSION}-macos-amd64.zip"
+    sha256 "${MACOS_SHA}"
+  end
+
+  bottle :unneeded
+
+  def install
+    bin.install "lmgrep"
+  end
+
+end
