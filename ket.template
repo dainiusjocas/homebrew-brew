@@ -1,4 +1,4 @@
-class KET < Formula
+class Ket < Formula
 
   desc "KET - Kafka Elasticsearch Tool"
   homepage "https://github.com/vinted/kafka-elasticsearch-tool"
