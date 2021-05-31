@@ -1,0 +1,21 @@
+class KET < Formula
+
+  desc "KET - Kafka Elasticsearch Tool"
+  homepage "https://github.com/vinted/kafka-elasticsearch-tool"
+  version "${VERSION}"
+
+  if OS.linux?
+    url "https://github.com/vinted/kafka-elasticsearch-tool/releases/download/v${VERSION}/ket-v${VERSION}-linux-amd64.zip"
+    sha256 "${LINUX_SHA}"
+  else
+    url "https://github.com/vinted/kafka-elasticsearch-tool/releases/download/v${VERSION}/ket-v${VERSION}-macos-amd64.zip"
+    sha256 "${MACOS_SHA}"
+  end
+
+  bottle :unneeded
+
+  def install
+    bin.install "ket"
+  end
+
+end
