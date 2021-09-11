@@ -1,0 +1,21 @@
+class CljJq < Formula
+
+  desc "`jackson-jq` based command-line JSON processor"
+  homepage "https://github.com/dainiusjocas/clj-jq"
+  version "${VERSION}"
+
+  if OS.linux?
+    url "https://github.com/dainiusjocas/clj-jq/releases/download/v${VERSION}/clj-jq-${VERSION}-linux-amd64-static.zip"
+    sha256 "${LINUX_SHA}"
+  else
+    url "https://github.com/dainiusjocas/clj-jq/releases/download/v${VERSION}/clj-jq-${VERSION}-macos-amd64.zip"
+    sha256 "${MACOS_SHA}"
+  end
+
+  bottle :unneeded
+
+  def install
+    bin.install "clj-jq"
+  end
+
+end

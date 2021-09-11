@@ -1,0 +1,18 @@
+#!/usr/bin/env /bin/bash
+
+tag=$(curl --silent "https://api.github.com/repos/dainiusjocas/clj-jq/tags" | jq -r '.[0].name')
+version=${tag:1}
+
+linux="clj-jq-$version-linux-amd64-static.zip"
+macos="clj-jq-$version-macos-amd64.zip"
+
+curl -sLO "https://github.com/dainiusjocas/clj-jq/releases/download/v$version/$linux"
+curl -sLO "https://github.com/dainiusjocas/clj-jq/releases/download/v$version/$macos"
+
+linux_sha=$(sha256sum "$linux" | cut -f 1 -d " ")
+macos_sha=$(sha256sum "$macos" | cut -f 1 -d " ")
+
+sed -e "s/\${i}/1/" -e "s/\${VERSION}/$version/g" \
+    -e "s/\${LINUX_SHA}/$linux_sha/g" \
+    -e "s/\${MACOS_SHA}/$macos_sha/g" \
+    clj_jq.template > clj_jq.rb
