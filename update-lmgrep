@@ -3,7 +3,7 @@
 tag=$(curl --silent "https://api.github.com/repos/dainiusjocas/lucene-grep/tags" | jq -r '.[0].name')
 version=${tag:1}
 
-linux="lmgrep-v$version-linux-amd64.zip"
+linux="lmgrep-v$version-linux-amd64-static.zip"
 macos="lmgrep-v$version-macos-amd64.zip"
 
 curl -sLO "https://github.com/dainiusjocas/lucene-grep/releases/download/v$version/$linux"
