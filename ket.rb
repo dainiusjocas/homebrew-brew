@@ -12,8 +12,6 @@ class Ket < Formula
     sha256 "2c82b06039f6f0aa5899ff0c9809fad7cac186087980cc0904da766b470d8b7e"
   end
 
-  bottle :unneeded
-
   def install
     bin.install "ket"
   end

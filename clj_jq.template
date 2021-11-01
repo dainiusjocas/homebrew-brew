@@ -12,8 +12,6 @@ class CljJq < Formula
     sha256 "${MACOS_SHA}"
   end
 
-  bottle :unneeded
-
   def install
     bin.install "clj-jq"
   end

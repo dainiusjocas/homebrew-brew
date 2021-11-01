@@ -12,8 +12,6 @@ class CljJq < Formula
     sha256 "29cc6cd82c7cb71029bf749167de7b1858d2bcc10b8d3f53af69b618905e091b"
   end
 
-  bottle :unneeded
-
   def install
     bin.install "clj-jq"
   end

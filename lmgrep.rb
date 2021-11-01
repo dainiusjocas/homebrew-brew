@@ -12,8 +12,6 @@ class Lmgrep < Formula
     sha256 "2626a1e3ce261a0b1e9716db7e9f0378d220c817e52b44042f3cc8e308d49d27"
   end
 
-  bottle :unneeded
-
   def install
     bin.install "lmgrep"
   end

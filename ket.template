@@ -12,8 +12,6 @@ class Ket < Formula
     sha256 "${MACOS_SHA}"
   end
 
-  bottle :unneeded
-
   def install
     bin.install "ket"
   end
