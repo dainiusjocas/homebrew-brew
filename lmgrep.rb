@@ -6,10 +6,10 @@ class Lmgrep < Formula
 
   if OS.linux?
     url "https://github.com/dainiusjocas/lucene-grep/releases/download/v2022.02.10/lmgrep-v2022.02.10-linux-amd64-static.zip"
-    sha256 "a8ebb50391c0fde638ebf423bca1f72c0cc54dbc824bbe6d6d90d04bc35c1b16"
+    sha256 "41d81006a19688b8345e72ac66f028e3baada3b7ba6bf8ca1312f10f9660a038"
   else
     url "https://github.com/dainiusjocas/lucene-grep/releases/download/v2022.02.10/lmgrep-v2022.02.10-macos-amd64.zip"
-    sha256 "fc60eb8e0cc960becf3930300d9dedb6c2b746a3daea7e36473de47cb3828a9f"
+    sha256 "a165a80cd2c23235a28e409a2343e6ccf3ffab2bcf1f882065e2d0818550daa0"
   end
 
   def install
