@@ -2,14 +2,14 @@ class Lmgrep < Formula
 
   desc "Grep-like utility based on Lucene Monitor"
   homepage "https://github.com/dainiusjocas/lucene-grep"
-  version "2022.02.18"
+  version "2022.02.19"
 
   if OS.linux?
-    url "https://github.com/dainiusjocas/lucene-grep/releases/download/v2022.02.18/lmgrep-v2022.02.18-linux-amd64-static.zip"
-    sha256 "5d91cdcb3fef444398c0c887bfb06bcde527d8af8a092a2ffa49d2e94b899fb2"
+    url "https://github.com/dainiusjocas/lucene-grep/releases/download/v2022.02.19/lmgrep-v2022.02.19-linux-amd64-static.zip"
+    sha256 "3d0c2b13fd44c5a28e683bd350e39328a334e9a474fcecd23c45a50bbdacc38b"
   else
-    url "https://github.com/dainiusjocas/lucene-grep/releases/download/v2022.02.18/lmgrep-v2022.02.18-macos-amd64.zip"
-    sha256 "9dba3cdf3597a4406feddcf95265fc50955f301cdcbf9f8391493e5229117abc"
+    url "https://github.com/dainiusjocas/lucene-grep/releases/download/v2022.02.19/lmgrep-v2022.02.19-macos-amd64.zip"
+    sha256 "adbf002f8f5daedf02f2526cf0b7161af9aa9f5b1eb70c29c677de355a6677cb"
   end
 
   def install
