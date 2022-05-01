@@ -5,14 +5,18 @@ version=${tag:1}
 
 linux="lmgrep-v$version-linux-amd64-static.zip"
 macos="lmgrep-v$version-macos-amd64.zip"
+macos_aarch64="lmgrep-v$version-macos-aarch64.zip"
 
 curl -sLO "https://github.com/dainiusjocas/lucene-grep/releases/download/v$version/$linux"
 curl -sLO "https://github.com/dainiusjocas/lucene-grep/releases/download/v$version/$macos"
+curl -sLO "https://github.com/dainiusjocas/lucene-grep/releases/download/v$version/$macos_aarch64"
 
 linux_sha=$(sha256sum "$linux" | cut -f 1 -d " ")
 macos_sha=$(sha256sum "$macos" | cut -f 1 -d " ")
+macos_aarch64_sha=$(sha256sum "$macos_aarch64" | cut -f 1 -d " ")
 
 sed -e "s/\${i}/1/" -e "s/\${VERSION}/$version/g" \
     -e "s/\${LINUX_SHA}/$linux_sha/g" \
     -e "s/\${MACOS_SHA}/$macos_sha/g" \
+    -e "s/\${MACOS_SHA}/$macos_aarch64_sha/g" \
     lmgrep.template > lmgrep.rb
