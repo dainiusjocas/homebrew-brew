@@ -18,5 +18,5 @@ macos_aarch64_sha=$(sha256sum "$macos_aarch64" | cut -f 1 -d " ")
 sed -e "s/\${i}/1/" -e "s/\${VERSION}/$version/g" \
     -e "s/\${LINUX_SHA}/$linux_sha/g" \
     -e "s/\${MACOS_SHA}/$macos_sha/g" \
-    -e "s/\${MACOS_SHA}/$macos_aarch64_sha/g" \
+    -e "s/\${MACOS_AARCH64_SHA}/$macos_aarch64_sha/g" \
     lmgrep.template > lmgrep.rb
