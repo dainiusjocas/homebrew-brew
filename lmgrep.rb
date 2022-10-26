@@ -6,14 +6,14 @@ class Lmgrep < Formula
 
   if OS.linux?
     url "https://github.com/dainiusjocas/lucene-grep/releases/download/v2022.10.25/lmgrep-v2022.10.25-linux-amd64-static.zip"
-    sha256 "0019dfc4b32d63c1392aa264aed2253c1e0c2fb09216f8e2cc269bbfb8bb49b5"
+    sha256 "c3d96ace654bf17e6d761ff85408553fe3d7641dfefcd379e983334ee85946ec"
   else
     if Hardware::CPU.arm?
       url "https://github.com/dainiusjocas/lucene-grep/releases/download/v2022.10.25/lmgrep-v2022.10.25-macos-aarch64.zip"
-      sha256 "0019dfc4b32d63c1392aa264aed2253c1e0c2fb09216f8e2cc269bbfb8bb49b5"
+      sha256 "98d2566995cb5facb170d1108e2b511488e13eb2d0d48652e116e5c503120aea"
     else
       url "https://github.com/dainiusjocas/lucene-grep/releases/download/v2022.10.25/lmgrep-v2022.10.25-macos-amd64.zip"
-      sha256 "0019dfc4b32d63c1392aa264aed2253c1e0c2fb09216f8e2cc269bbfb8bb49b5"
+      sha256 "a8c5a4ddaea1cdc5898df13198b5b524fe5eef3dc7e8501b1eb6176b663859fe"
     end
   end
 
