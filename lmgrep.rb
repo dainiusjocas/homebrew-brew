@@ -2,18 +2,18 @@ class Lmgrep < Formula
 
   desc "Grep-like utility based on Lucene Monitor"
   homepage "https://github.com/dainiusjocas/lucene-grep"
-  version "2023.01.30"
+  version "2023.05.13"
 
   if OS.linux?
-    url "https://github.com/dainiusjocas/lucene-grep/releases/download/v2023.01.30/lmgrep-v2023.01.30-linux-amd64-static.zip"
-    sha256 "710bbecf763dc69463bb7964574e8c3c282526df3b7afc5891441b9fbb88b0c5"
+    url "https://github.com/dainiusjocas/lucene-grep/releases/download/v2023.05.13/lmgrep-v2023.05.13-linux-amd64-static.zip"
+    sha256 "853aa5c16d099670e2cd036265226bf4b7bf67c4fa29c018b201b0547da47f3d"
   else
     if Hardware::CPU.arm?
-      url "https://github.com/dainiusjocas/lucene-grep/releases/download/v2023.01.30/lmgrep-v2023.01.30-macos-aarch64.zip"
-      sha256 "3bbaed7e83bb1f716bca78843bb297d82cb18d25d010b220b9fcdf077f0111e2"
+      url "https://github.com/dainiusjocas/lucene-grep/releases/download/v2023.05.13/lmgrep-v2023.05.13-macos-aarch64.zip"
+      sha256 "ca8e1be1b95da9f3f5a145b45544fcc6abbccf0da67cf4232f6133fff9fa4049"
     else
-      url "https://github.com/dainiusjocas/lucene-grep/releases/download/v2023.01.30/lmgrep-v2023.01.30-macos-amd64.zip"
-      sha256 "aa14f8bcd8d3fd1fbc4560dd66a151cf9e5bbe9c1fd9ababa8f4adc8ec3071fe"
+      url "https://github.com/dainiusjocas/lucene-grep/releases/download/v2023.05.13/lmgrep-v2023.05.13-macos-amd64.zip"
+      sha256 "5854e3df09c293aa341f2ed215bc6e968d0980d13d1e60f676c5518d73142052"
     end
   end
 
